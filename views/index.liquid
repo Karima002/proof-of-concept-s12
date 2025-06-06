@@ -1,0 +1,22 @@
+{% render 'partials/head.liquid', title: 'Funda' %}
+{% render 'partials/header.liquid' %}
+
+<body>
+
+    <main>
+
+            <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}">
+            <h1> {{ huis.street }}</h1>
+            <p> {{ huis.postal_code }} {{ huis.city }}</p>
+
+            <div>
+                <p> {{huis.m2}} m²</p>
+            </div>
+    </main>
+
+
+
+
+
+
+{% render 'partials/footer.liquid' %}
