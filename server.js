@@ -18,7 +18,7 @@ app.get('/detail/koop/Amsterdam/huis-Apollolaan-11', async function (request, re
     const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
     
     response.render("index.liquid", { 
-        huis: apiResponseJSON.data,
+      huis: apiResponseJSON.data[6], // haal het zesde huis eruit
     })
   })
 
@@ -26,5 +26,4 @@ app.set('port', process.env.PORT || 8000)
 
 // Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
-  console.log(`http://localhost:${app.get('port')}/en`)})
-  
+  console.log(`http://localhost:${app.get('port')}/detail/koop/Amsterdam/huis-Apollolaan-11`)})
