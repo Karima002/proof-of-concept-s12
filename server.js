@@ -13,3 +13,18 @@ app.engine('liquid', engine.express())
 
 app.set('views', './views') //Instellen van de map met de Liquid templates
 
+app.get('/detail/koop/Amsterdam/huis-Apollolaan-11', async function (request, response) {
+    const apiResponse = await fetch('https://fdnd-agency.directus.app/items/f_houses')
+    const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+    
+    response.render("index.liquid", { 
+        huis: apiResponseJSON.data,
+    })
+  })
+
+app.set('port', process.env.PORT || 8000)
+
+// Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
+app.listen(app.get('port'), function () {
+  console.log(`http://localhost:${app.get('port')}/en`)})
+  
