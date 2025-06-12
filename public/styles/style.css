@@ -15,7 +15,6 @@ nav {
 }
 
 
-
 ul {
     list-style: none;
     display: flex;
@@ -66,6 +65,21 @@ a, .button-menu{
 }
 
 /* MARK: main mediaviewer & info */
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;  
+}
+
+.carousel__slide {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+
+
 
 .straat {
     font-family: var(--font-proxima-semibold);
@@ -147,16 +161,16 @@ a, .button-menu{
     line-height: 1.5em;
 }
 
-.omschrijving a {
+.omschrijving label {
     display: flex;
     align-items: center;
     padding-left: .5em;
      color: var(--color-blue);
     text-decoration: none;
     padding-bottom: 1em;
+    cursor: pointer;
     &:hover {
         text-decoration: underline;
-        cursor: pointer;
     }
 }
 
