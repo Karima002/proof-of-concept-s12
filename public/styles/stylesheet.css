@@ -124,4 +124,20 @@ body {
 
     --border: solid 1px var(--color-border);
 
+    
+}
+
+h1 {
+  font-family: var(--font-proxima-semibold);
+  font-size: var(--font-size-xm);
+  }
+
+p, dt, span, dd{
+  font-family: var(--font-proxima-regular);
+  font-size: var(--font-size-m);
+  line-height: 1.5em;
+}
+
+button {
+    all: unset;
 }
