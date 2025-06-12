@@ -4,53 +4,56 @@
 <body>
 
     <main>
-        <article>
+        <article class="info-adres">
             <!-- MARK: mediaviewer -->
-            <section class="info-adres">
+            <section class="adres">
                 <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=320&width=375">
                 <h1> {{ huis.street }}</h1>
-                <p> {{ huis.postal_code }} {{ huis.city }}</p>
-                <img src="/assets/map.png">
+                <p class="tekst-postcode"> {{ huis.postal_code }} {{ huis.city }}</p>
+                <img class="image-kaart-adres" src="/assets/map.png">
             </section>
 
             <!-- MARK: Informatie huis-->
             <section class="info-oppervlakte"> 
 
                 {% render 'partials/icons/oppervlakte.liquid' %}
-                <p> {{ huis.m2_garden }} m²</p>
+                <p class="tekst-icons"> {{ huis.m2_garden }} m²</p>
 
                 {% render 'partials/icons/oppervlakte2.liquid' %}
-                <p> {{ huis.m2 }} m²</p>
+                <p class="tekst-icons"> {{ huis.m2 }} m²</p>
 
 
                 {% render 'partials/icons/room.liquid' %}
-                <p> {{huis.rooms}}</p>
+                <p class="tekst-icons"> {{huis.rooms}}</p>
                 
                {% render 'partials/icons/electric.liquid' %}
-                <p>C</p>
+                <p class="tekst-icons">C</p>
             </section>
 
-                <p> €{{ huis.price }} k.k. </p>
+            <section class="maandlasten">
+                <p class="tekst-price"> € {{ huis.price }} k.k. </p>
 
-                <button>
-                    <img src="/assets/calculator.png">
+                <a href="">
+                {% render 'partials/icons/calculator.liquid' %}
                     <p>Wat worden mijn maandlasten?</p>
-                </button>
-            </article>
-
-        <!-- MARK: beschrijving huis -->
-        <article>
-            <h1>Omschrijving</h1>
-            <p> {{ huis.description }}</p>
-
-            <button>
-                <img src="/assets/plus.png">
-                <p>Lees de volledige omschrijving</p>
-            </button>
+                </a>
+            </section>
         </article>
 
-        <article>
-            <button>Advertentie</button>
+        <!-- MARK: beschrijving huis -->
+        <article class="omschrijving">
+            <h1>Omschrijving</h1>
+            <p class="tekst-icons"> {{ huis.description }}</p>
+
+            <a href="" >
+                <img src="/assets/plus.png">
+                <p>Lees de volledige omschrijving</p>
+            </a>
+        </article>
+                    
+        <button class="advertentie-button">Advertentie</button>
+
+        <article class="advertentie">
             <img src="/assets/advertiser.png">
             <h1>Design stalen deuren</h1>
             <p>Al meer dan 1200 tevreden klanten door heel Nederland. Meer dan 10 jaar ervaring.</p>
