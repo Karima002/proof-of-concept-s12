@@ -35,6 +35,10 @@ li {
     padding: .5em;
     color: var(--color-white);
     justify-items: center;
+    &:hover {
+        background-color: var(--color-orange-hover);
+        cursor: ß;
+    }
 }
 
 .navigatie-l {
@@ -65,12 +69,110 @@ a, .button-menu{
 
 /* MARK: main mediaviewer & info */
 
-.info-adres {
-}
-
 h1 {
     font-family: var(--font-proxima-semibold);
     font-size: var(--font-size-xm);
     border-top: solid 1px var(--color-border);
+    padding-top: .8em;
+    padding-left: .5em;
+}
 
+.tekst-postcode {
+    font-family: var(--font-proxima-regular);
+    font-size: var(--font-size-m);
+    padding: .5em 0 .5em .7em;
+}
+
+.info-adres {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: .5em;
+}
+
+
+.image-kaart-adres {
+    grid-column: 2/3;
+    
+}
+
+.info-oppervlakte {
+    display: flex;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    column-gap: .7em;
+    padding-left: .5em;
+}
+
+
+.maandlasten {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: .4em;
+}
+
+.maandlasten a {
+    display: flex;
+    align-items: center;
+    padding-left: -.5em;
+    font-family: var(--font-proxima-regular);
+    font-size: var(--font-size-m);
+    color: var(--color-blue);
+    text-decoration: none;
+    padding-bottom: 1em;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+
+    }
+}
+
+.tekst-icons {
+    font-family: var(--font-proxima-regular-it);
+    font-size: var(--font-size-m);
+    padding-top: .2em;
+}
+
+.tekst-price {
+    font-family: var(--font-proxima-semibold);
+    font-size: var(--font-size-m);
+    padding-left: .225em;
+}
+
+.omschrijving p {
+    padding-left: .8em;
+    font-family: var(--font-proxima-regular);
+    font-size: var(--font-size-m);
+    padding-top: .2em;
+    line-height: 1.5em;
+}
+
+.omschrijving a {
+    display: flex;
+    align-items: center;
+    padding-left: .5em;
+     color: var(--color-blue);
+    text-decoration: none;
+    padding-bottom: 1em;
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+
+.advertentie-button {
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+    padding: .4em;
+    border-radius: .3em;
+    font-family: var(--font-proxima-semibold);
+    font-size: var(--font-size-xs);
+    margin-left: .6em;
+    &:hover {
+        background-color: var(--color-light-grey-hover);
+        cursor: pointer;
+    }
 }
