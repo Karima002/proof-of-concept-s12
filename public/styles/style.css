@@ -161,6 +161,21 @@ a, .button-menu{
     line-height: 1.5em;
 }
 
+#check {
+    display: none;
+}
+
+#check:checked ~ .content {
+    display: block;
+}
+
+#check:checked ~ label {
+    display: none;
+}
+
+.content {
+    display: none;
+}
 .omschrijving label {
     display: flex;
     align-items: center;
