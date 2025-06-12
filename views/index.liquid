@@ -4,11 +4,33 @@
 <body>
 
     <main>
-        <article class="info-adres">
-            <!-- MARK: mediaviewer -->
-            <section class="adres">
+        <div class="carousel">
+            <div class="carousel__slide" data-label="Slide 1">
                 <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=320&width=375">
-                <h1> {{ huis.street }}</h1>
+            </div>
+
+            <div class="carousel__slide" data-label="Slide 2">
+                <img src="/assets/plattegrong.jpg" width="375" height=320>
+            </div>
+
+            <div class="carousel__slide" data-label="Slide 3">
+                <video controls width="375" height=320>
+                    <source src="/assets/video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="carousel__slide" data-label="Slide 4">
+                <img src="/assets/afb1.jpg" width="375" height=320>
+            </div>
+
+            <div class="carousel__slide" data-label="Slide 5">
+                <img src="/assets/afb2.jpg" width="375" height=320>
+            </div>
+        </div>  
+
+            <section class="adres">
+
+                <h1 class="straat"> {{ huis.street }}</h1>
                 <p class="tekst-postcode"> {{ huis.postal_code }} {{ huis.city }}</p>
                 <img class="image-kaart-adres" src="/assets/map.png">
             </section>
@@ -33,7 +55,7 @@
             <section class="maandlasten">
                 <p class="tekst-price"> € {{ huis.price }} k.k. </p>
 
-                <a href="">
+                <a href="https://www.funda.nl/hypotheek/maandlasten/ing/?id=43923245">
                 {% render 'partials/icons/calculator.liquid' %}
                     <p>Wat worden mijn maandlasten?</p>
                 </a>
@@ -42,28 +64,39 @@
 
         <!-- MARK: beschrijving huis -->
         <article class="omschrijving">
-            <h1>Omschrijving</h1>
-            <p class="tekst-icons"> {{ huis.description }}</p>
+            <input id="check" type="checkbox">
+            
+            <h1 class="straat">Omschrijving</h1>
+            <p>Onttrokken aan het zicht ligt deze verborgen parel op haar parkachtige domein van 4345m2. De bungalow ligt aan de Stationsweg, een van de bekendste..</p>
 
-            <a href="" >
+            <div class="content">
+                <p class="tekst-icons"> {{ huis.description }}</p>
+                <label for="check"> 
+                    <img src="/assets/line.png">
+                    <p>Verberg omschrijving</p>
+                </label>
+            </div>
+
+            <label for="check">
                 <img src="/assets/plus.png">
-                <p>Lees de volledige omschrijving</p>
-            </a>
+                <p> Lees de volledige omschrijving </p>
+            </label>
         </article>
                     
         <button class="advertentie-button">Advertentie</button>
 
         <article class="advertentie">
-            <img src="/assets/advertiser.png">
-            <h1>Design stalen deuren</h1>
-            <p>Al meer dan 1200 tevreden klanten door heel Nederland. Meer dan 10 jaar ervaring.</p>
-            <button>Offerte vragen</button>
+            <img class="logo-thuis-in-staal" src="/assets/Advertiser.png">
+            <h1 class="design-stalen-deur-h1">Design stalen deuren</h1>
+            <p class="design-stalen-deur-p">Al meer dan 1200 tevreden klanten door heel Nederland. Meer dan 10 jaar ervaring.</p>
+            <button class="offerte">Offerte vragen</button>
+            <img class="image-staal" src="/assets/imagethuis.png">
         </article>
 
         <!--MARK: description lists --> 
 
         <article>
-            <h1>Kenmerken</h1>
+            <h1 class="kenmerken">Kenmerken</h1>
             <section class="description-list">
                 <div>
                     {% render 'partials/icons/overdracht.liquid' %}
@@ -332,7 +365,7 @@
             </table>
         </article>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.2226894504543!2d4.879990576692972!3d52.34824624893146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f65ebcbf19%3A0x156af697d4fe380d!2sApollolaan%2011%2C%201077%20AA%20Amsterdam!5e0!3m2!1snl!2snl!4v1749243620818!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        {% comment %} <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.2226894504543!2d4.879990576692972!3d52.34824624893146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f65ebcbf19%3A0x156af697d4fe380d!2sApollolaan%2011%2C%201077%20AA%20Amsterdam!5e0!3m2!1snl!2snl!4v1749243620818!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> {% endcomment %}
         <div>
             <a href="">
                 <img src="/assets/trailing.png" alt="afbeelding van 2 pijlen"> 
@@ -463,5 +496,9 @@
             <button>Hypotheek</button>
         </article>
     </main>
+
+
+    
+       
 
 {% render 'partials/footer.liquid' %}
