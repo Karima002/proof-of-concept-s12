@@ -112,11 +112,16 @@ body {
 
     /* colors */
     --color-orange: #ff9b21;
+    --color-orange-hover: #F6951F;
     --color-brown: #6a281c;
     --color-white: #ffffff;
     --color-broken-white: #f8f0e6;
     --color-lightblue: #e5f6ff;
     --color-blue: #2a8fd8;
     --color-border: #E6E6E6;
+    --color-light-grey: #999999;
+    --color-light-grey-hover: #817F7F;
+
+    --border: solid 1px var(--color-border);
 
 }
