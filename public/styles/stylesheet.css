@@ -121,6 +121,7 @@ body {
     --color-border: #E6E6E6;
     --color-light-grey: #999999;
     --color-light-grey-hover: #817F7F;
+    --color-grey: #4D4D4D;
 
     --border: solid 1px var(--color-border);
 
@@ -141,3 +142,10 @@ p, dt, span, dd{
 button {
     all: unset;
 }
+
+h2 {
+  font-size: var(--font-size-m);
+  font-family: var(--font-proxima-semibold);
+  
+}
+

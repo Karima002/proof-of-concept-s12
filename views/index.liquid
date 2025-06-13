@@ -66,7 +66,7 @@
         <article class="omschrijving">
             <input id="check" type="checkbox">
             
-            <h1 class="straat">Omschrijving</h1>
+            <h1 class="straat omschrijf">Omschrijving</h1>
             <p>Onttrokken aan het zicht ligt deze verborgen parel op haar parkachtige domein van 4345m2. De bungalow ligt aan de Stationsweg, een van de bekendste..</p>
 
             <div class="content">
@@ -97,110 +97,110 @@
 
         <article>
             <h1 class="kenmerken">Kenmerken</h1>
-            <section class="description-list">
-                <div>
-                    {% render 'partials/icons/overdracht.liquid' %}
 
+            <section class="description-list">
+                <div class="naam-kenmerk-tabel">
+                    {% render 'partials/icons/overdracht.liquid' %}
                     <h2>Overdracht</h2>
                 </div>
 
                 <dL>
                     <dt>Vraagprijs</dt>
-                    <span>€{{ huis.price }} kosten per koper</span>
+                    <dd>€ 3.250.000 kosten per koper</dd>
 
                     <dt>Vraagprijs per m²</dt>
-                    <span>{{ huis.m2 }} m²</span>
+                    <dd>{{ huis.m2 }} m²</dd>
 
                     <dt>Aangeboden sinds</dt>
-                    <span>31 Maart 2021</span>
+                    <dd>31 Maart 2021</dd>
 
                     <dt>Status</dt>
-                    <span>Beschikbaar</span>
+                    <dd>Beschikbaar</dd>
 
                     <dt>Aanvaarding</dt>
-                    <span>In overleg</span>
+                    <dd>In overleg</dd>
 
                     <dt>Bijdrage VVE</dt>
-                    <span>€ 130,00 per maand</span>
+                    <dd>€ 130,00 per maand</dd>
                 </dL>
             </section>
             
             <section class="description-list">
 
-                <div>
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/bouw.liquid' %}
                     <h2>Bouw</h2>
                 </div>
 
                 <dl>
                     <dt>Soort huis</dt>
-                    <span>Villa, vrijstaande woning</span>
+                    <dd class="detail-standard">Villa, vrijstaande woning</dd>
 
                     <dt>Soort bouw</dt>
-                    <span>Bestaande bouw</span>
+                    <dd>Bestaande bouw</dd>
 
                     <dt>Bouwperiode</dt>
-                    <span>1906-1930</span>
+                    <dd>1906-1930</dd>
 
                     <dt>Soort dak</dt>
-                    <span>Zadeldak bedekt met pannen</span>
+                    <dd>Zadeldak bedekt met pannen</dd>
                 </dl>
             </section>
             
             <section class="description-list">
-                <div>
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/inhoud.liquid' %}
                     <h2>Oppervlakten en inhoud</h2>
                 </div>
 
                 <dl>
                     <dt>Gebruikersoppervlakten</dt>
-                    <dd>Wonen</dd>
-                    <dd>571 m²</dd>
+                    <dd class="detail-padding">Wonen</dd>
+                    <dd class="detail-padding">571 m²</dd>
 
-                    <dd>Overige inpandige ruimte</dd>
-                    <dd>311 m²</dd>
+                    <dd class="detail-padding">Overige inpandige ruimte</dd>
+                    <dd class="detail-padding">311 m²</dd>
 
-                    <dd>Gebouwgebonden buitenruimte</dd>
-                    <dd>311 m²</dd>
+                    <dd class="detail-padding">Gebouwgebonden buitenruimte</dd>
+                    <dd class="detail-padding">311 m²</dd>
 
                     <dt>Externe bergruimte</dt>
-                    <span>16 m²</span>
+                    <dd>16 m²</dd>
 
                     <dt>Perceel</dt>
-                    <span>620 m²</span>
+                    <dd>620 m²</dd>
 
                     <dt>Inhoud</dt>
-                    <span>1.750 m²</span>
+                    <dd>1.750 m²</dd>
                 </dl>
             </section>
 
             <section class="description-list">
-                <div>
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/indeling.liquid' %}
                     <h2>Indeling</h2>
                 </div>
 
                 <dl>
                     <dt>Indeling</dt>
-                    <span>Aantal kamers<br>14 kamers (9 slaapkamers)</span>
+                    <dd>Aantal kamers<br>14 kamers (9 slaapkamers)</dd>
 
                     <dt>Aantal badkamers</dt>
-                    <span>3 badkamers en 1 apart toilet</span>
+                    <dd>3 badkamers en 1 apart toilet</dd>
 
                     <dt>Badkamervoorzieningen</dt>
-                    <span>3 ligbaden, 2 douches en 2 toiletten</span>
+                    <dd>3 ligbaden, 2 douches en 2 toiletten</dd>
 
                     <dt>Aantal woonlagen</dt>
-                    <span>3 woonlagen en een kelder</span>
+                    <dd>3 woonlagen en een kelder</dd>
 
                     <dt>Voorzieningen</dt>
-                    <span>Dakraam, rolluiken, mechanische ventilatie en TV kabel</span>
+                    <dd>Dakraam, rolluiken, mechanische ventilatie en TV kabel</dd>
                 </dl>
             </section>
 
             <section class="description-list">
-                <div>
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/energie.liquid' %}
 
                     <h2>Energie</h2>
@@ -210,25 +210,25 @@
 
                     {% render 'partials/icons/energielabel.liquid' %}
 
-                    <span>Energielabel</span>
+                    <dd>Energielabel</dd>
 
                     <img src="/assets/energy-label.pngß">
 
                     <dd>Energielabel A</dd>
 
                     <dt>Verwarming</dt>
-                    <span>Cv-ketel</span>
+                    <dd>Cv-ketel</dd>
 
                     <dt>Warm water</dt>
-                    <span>Cv-ketel</span>
+                    <dd>Cv-ketel</dd>
 
                     <dt>Cv-ketel</dt>
-                    <span>Remeha (2005)</span>
+                    <dd>Remeha (2005)</dd>
                 </dl>
             </section>
 
-            <section>
-                <div>
+            <section class="description-list"> 
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/kadaster.liquid' %}
                     <h2>Kadastrale gegevens</h2>
                 </div>
@@ -248,52 +248,51 @@
                 </dl>
             </section>
 
-            <section>
-                <div>
+            <section class="description-list">
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/buitenruimte.liquid' %}
                     <h2>Buitenruimte</h2>
                 </div>
 
                 <dl>
                     <dt>Ligging</dt>
-                    <span>Aan drukke weg en in woonwijk</span>
+                    <dd>Aan drukke weg en in woonwijk</dd>
 
                     <dt>Tuin</dt>
-                    <span>Tuin rondom</span>
+                    <dd>Tuin rondom</dd>
 
                     <dt>Balkon/dakterras</dt>
-                    <span>Balkon aanwezig</span>
+                    <dd>Balkon aanwezig</dd>
                 </dl>
             </section>
 
-            <section>
-                <div>
+            <section class="description-list">
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/garage.liquid' %}
                     <h2>Garage</h2>
                 </div>
 
                 <dl>
                     <dt>Soort garage</dt>
-                    <span>Vrijstaande stenen garage</span>
+                    <dd>Vrijstaande stenen garage</dd>
 
                     <dt>Capaciteit</dt>
-                    <span>2 auto’s</span>
+                    <dd>2 auto’s</dd>
 
                     <dt>Voorzieningen</dt>
-                    <span>Elektra</span>
+                    <dd>Elektra</dd>
                 </dl>
             </section>
 
-            <section>
-                <div>
+            <section class="description-list">
+                <div class="naam-kenmerk-tabel">
                     {% render 'partials/icons/parkeergelegenheid.liquid' %}
-
                     <h2>Parkeergelegenheid</h2>
                 </div>
 
                 <dl>
                     <dt>Soort parkeergelegenheid</dt>
-                    <span>Betaald parkeren parkeervergunningen</span>
+                    <dd>Betaald parkeren parkeervergunningen</dd>
                 </dl>
             </section>
         </article>
@@ -365,7 +364,7 @@
             </table>
         </article>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.2226894504543!2d4.879990576692972!3d52.34824624893146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f65ebcbf19%3A0x156af697d4fe380d!2sApollolaan%2011%2C%201077%20AA%20Amsterdam!5e0!3m2!1snl!2snl!4v1749243620818!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.2226894504543!2d4.879990576692972!3d52.34824624893146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f65ebcbf19%3A0x156af697d4fe380d!2sApollolaan%2011%2C%201077%20AA%20Amsterdam!5e0!3m2!1snl!2snl!4v1749243620818!5m2!1snl!2snl" width="360" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
         <div>
             <a href="">
                 <img src="/assets/trailing.png" alt="afbeelding van 2 pijlen"> 

@@ -10,20 +10,19 @@ header {
     background-color: var(--color-orange);
 }
 
-nav {
-    display: flex;
-}
+.logo-funda {
 
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+ }
+}
 
 ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     column-gap: .5em;
-
-        @media (min-width: 768px) {
-            justify-content: flex-end;
-        }
 }
 
 li {
@@ -34,10 +33,15 @@ li {
     justify-items: center;
     &:hover {
         background-color: var(--color-orange-hover);
-        cursor: ß;
+        cursor: pointer;
     }
 }
 
+.navigatie-icon {
+    @media (min-width: 768px) {
+        justify-content: flex-end;
+    }
+}
 .navigatie-l {
     display: none;
     font-family: var(--font-proxima-regular);
@@ -47,6 +51,7 @@ li {
     justify-content: center;
         @media (min-width: 768px) {
             display: block;
+            padding-top: .6em;;
         }
 }
 
@@ -217,7 +222,7 @@ a, .button-menu{
 .advertentie {
     border-top: var(--border);
     margin-top: .5em;
-    padding-left: .5em;
+    padding-left: .6em;
     padding-bottom: .7em;
     border-bottom: var(--border);
     display: grid;
@@ -235,6 +240,8 @@ a, .button-menu{
     grid-column: 1/2;
     grid-row: 2/3;
     column-gap: .1em;
+    min-width: 10em;
+
 }
 
 .design-stalen-deur-p {
@@ -246,13 +253,20 @@ a, .button-menu{
 .offerte {
     grid-column: 1/2;
     grid-row: 4/5;
-    max-width: 8em;
+    max-width: 7em;
     border: solid 1px var(--color-blue);
     font-family: var(--font-proxima-regular);
     font-size: var(--font-size-m);
     color: var(--color-blue);
     padding-left: .7em;
     margin-top: .5em;
+    border-radius: .2em;
+    &:hover {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        cursor: pointer;
+ ;
+    }
 }
 
 .image-staal {
@@ -264,4 +278,37 @@ a, .button-menu{
 
 .kenmerken {
     padding: 1em 0 1em .4em;
+}
+
+.naam-kenmerk-tabel {
+    display: flex;
+    column-gap: .5em;
+    h2 {
+        padding-top: .4em;
+    }
+}
+
+.description-list {
+    border: var(--border);
+    margin: .8em;
+    padding: .8em;
+    @media (min-width: 768px) {
+        max-width: 60rem;
+
+    }
+}
+
+dd {
+  border-bottom: var(--border);
+  padding-bottom: .6em;
+}
+
+dt {
+    color: var(--color-grey);
+    padding-top: .4em;
+    padding-bottom: .4em;
+}
+
+.detail-padding {
+    padding-left: 1em;
 }
