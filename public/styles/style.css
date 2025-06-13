@@ -79,9 +79,17 @@ a, .button-menu{
   }
 
 
+.adres {
+    display: grid;
+    grid-template-columns: auto .5fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 2em;
+}
 
 
 .straat {
+    grid-column: 1/2;
+    grid-row: 1/2;
     font-family: var(--font-proxima-semibold);
     font-size: var(--font-size-xm);
     border-top: solid 1px var(--color-border);
@@ -90,23 +98,19 @@ a, .button-menu{
 }
 
 .tekst-postcode {
+    grid-column: 1/2;
+    grid-row: 2/3;
     font-family: var(--font-proxima-regular);
     font-size: var(--font-size-m);
-    padding: .5em 0 .5em .7em;
+    padding: .5em 0 0 .7em;
 }
-
-.info-adres {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: .5em;
-}
-
 
 .image-kaart-adres {
     grid-column: 2/3;
-    
+    grid-row: 1/3;
+    padding-top: 1em;
 }
+
 
 .info-oppervlakte {
     display: flex;
@@ -142,7 +146,7 @@ a, .button-menu{
 }
 
 .tekst-icons {
-    font-family: var(--font-proxima-regular-it);
+    font-family: var(--font-proxima-regular);
     font-size: var(--font-size-m);
     padding-top: .2em;
 }
@@ -151,6 +155,7 @@ a, .button-menu{
     font-family: var(--font-proxima-semibold);
     font-size: var(--font-size-m);
     padding-left: .225em;
+    padding-top: .8em;
 }
 
 .omschrijving p {
@@ -167,6 +172,10 @@ a, .button-menu{
 
 #check:checked ~ .content {
     display: block;
+}
+
+#check:checked ~ p {
+    display: none;
 }
 
 #check:checked ~ label {
