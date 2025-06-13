@@ -283,6 +283,7 @@ a, .button-menu{
 .naam-kenmerk-tabel {
     display: flex;
     column-gap: .5em;
+    padding-bottom: .5em;
     h2 {
         padding-top: .4em;
     }
@@ -294,11 +295,13 @@ a, .button-menu{
     padding: .8em;
     @media (min-width: 768px) {
         max-width: 60rem;
-
+    }
+    a {
+        color: var(--color-blue);
     }
 }
 
-dd {
+.detail-standard {
   border-bottom: var(--border);
   padding-bottom: .6em;
 }
@@ -310,5 +313,14 @@ dt {
 }
 
 .detail-padding {
-    padding-left: 1em;
+    padding: .5em 0 .5em 1em;
 }
+
+.detail-padding-border {
+    border-bottom: var(--border);
+    padding-left: 1em;
+
+}
+
+/* MARK: overige info */
+

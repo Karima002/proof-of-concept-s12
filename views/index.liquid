@@ -106,22 +106,22 @@
 
                 <dL>
                     <dt>Vraagprijs</dt>
-                    <dd>€ 3.250.000 kosten per koper</dd>
+                    <dd class="detail-standard">€ 3.250.000 kosten per koper</dd>
 
                     <dt>Vraagprijs per m²</dt>
-                    <dd>{{ huis.m2 }} m²</dd>
+                    <dd class="detail-standard">{{ huis.m2 }} m²</dd>
 
                     <dt>Aangeboden sinds</dt>
-                    <dd>31 Maart 2021</dd>
+                    <dd class="detail-standard">31 Maart 2021</dd>
 
                     <dt>Status</dt>
-                    <dd>Beschikbaar</dd>
+                    <dd class="detail-standard">Beschikbaar</dd>
 
                     <dt>Aanvaarding</dt>
-                    <dd>In overleg</dd>
+                    <dd class="detail-standard">In overleg</dd>
 
                     <dt>Bijdrage VVE</dt>
-                    <dd>€ 130,00 per maand</dd>
+                    <dd class="detail-standard">€ 130,00 per maand</dd>
                 </dL>
             </section>
             
@@ -137,13 +137,13 @@
                     <dd class="detail-standard">Villa, vrijstaande woning</dd>
 
                     <dt>Soort bouw</dt>
-                    <dd>Bestaande bouw</dd>
+                    <dd class="detail-standard">Bestaande bouw</dd>
 
                     <dt>Bouwperiode</dt>
-                    <dd>1906-1930</dd>
+                    <dd class="detail-standard">1906-1930</dd>
 
                     <dt>Soort dak</dt>
-                    <dd>Zadeldak bedekt met pannen</dd>
+                    <dd class="detail-standard">Zadeldak bedekt met pannen</dd>
                 </dl>
             </section>
             
@@ -156,22 +156,22 @@
                 <dl>
                     <dt>Gebruikersoppervlakten</dt>
                     <dd class="detail-padding">Wonen</dd>
-                    <dd class="detail-padding">571 m²</dd>
+                    <dd class="detail-padding-border">571 m²</dd>
 
                     <dd class="detail-padding">Overige inpandige ruimte</dd>
-                    <dd class="detail-padding">311 m²</dd>
+                    <dd class="detail-padding-border">311 m²</dd>
 
                     <dd class="detail-padding">Gebouwgebonden buitenruimte</dd>
-                    <dd class="detail-padding">311 m²</dd>
+                    <dd class="detail-padding-border">311 m²</dd>
 
                     <dt>Externe bergruimte</dt>
-                    <dd>16 m²</dd>
+                    <dd class="detail-standard">16 m²</dd>
 
                     <dt>Perceel</dt>
-                    <dd>620 m²</dd>
+                    <dd class="detail-standard">620 m²</dd>
 
                     <dt>Inhoud</dt>
-                    <dd>1.750 m²</dd>
+                    <dd class="detail-standard">1.750 m²</dd>
                 </dl>
             </section>
 
@@ -182,20 +182,19 @@
                 </div>
 
                 <dl>
-                    <dt>Indeling</dt>
-                    <dd>Aantal kamers<br>14 kamers (9 slaapkamers)</dd>
+                    <dd class="detail-standard">Aantal kamers<br>14 kamers (9 slaapkamers)</dd>
 
                     <dt>Aantal badkamers</dt>
-                    <dd>3 badkamers en 1 apart toilet</dd>
+                    <dd class="detail-standard">3 badkamers en 1 apart toilet</dd>
 
                     <dt>Badkamervoorzieningen</dt>
-                    <dd>3 ligbaden, 2 douches en 2 toiletten</dd>
+                    <dd class="detail-standard">3 ligbaden, 2 douches en 2 toiletten</dd>
 
                     <dt>Aantal woonlagen</dt>
-                    <dd>3 woonlagen en een kelder</dd>
+                    <dd class="detail-standard">3 woonlagen en een kelder</dd>
 
                     <dt>Voorzieningen</dt>
-                    <dd>Dakraam, rolluiken, mechanische ventilatie en TV kabel</dd>
+                    <dd class="detail-standard">Dakraam, rolluiken, mechanische ventilatie en TV kabel</dd>
                 </dl>
             </section>
 
@@ -207,23 +206,24 @@
                 </div>
 
                 <dl>
+                    <div class="naam-kenmerk-tabel">
+                        {% render 'partials/icons/energielabel.liquid' %}
+                        <dd>Energielabel</dd>
+                    </div>
 
-                    {% render 'partials/icons/energielabel.liquid' %}
-
-                    <dd>Energielabel</dd>
-
-                    <img src="/assets/energy-label.pngß">
-
-                    <dd>Energielabel A</dd>
+                    <div class="naam-kenmerk-tabel">
+                        <img src="/assets/energy-label.png">
+                        <dd>Energielabel A</dd>
+                    </div>
 
                     <dt>Verwarming</dt>
-                    <dd>Cv-ketel</dd>
+                    <dd class="detail-standard">Cv-ketel</dd>
 
                     <dt>Warm water</dt>
-                    <dd>Cv-ketel</dd>
+                    <dd class="detail-standard">Cv-ketel</dd>
 
                     <dt>Cv-ketel</dt>
-                    <dd>Remeha (2005)</dd>
+                    <dd class="detail-standard">Remeha (2005)</dd>
                 </dl>
             </section>
 
@@ -235,16 +235,16 @@
 
                 <dl>
                     <dt>AMSTERDAM AB 678</dt>
-                    <a>Kadastrale kaart</a>
+                    <a href=""><dd class="detail-standard">Kadastrale kaart</dd></a>
 
-                    <dd>Oppervlakte</dd>
-                    <dd>620 m²</dd>
+                    <dt>Oppervlakte</dt>
+                    <dd class="detail-standard">620 m²</dd>
 
-                    <dd>Eigendomssituatie</dd>
-                    <dd>Gemeentelijk erfpacht</dd>
+                    <dt>Eigendomssituatie</dt>
+                    <dd class="detail-standard">Gemeentelijk erfpacht</dd>
 
-                    <dd>Lasten</dd>
-                    <dd>Afgekocht tot 31-05-2052</dd>
+                    <dt>Lasten</dt>
+                    <dd class="detail-standard">Afgekocht tot 31-05-2052</dd>
                 </dl>
             </section>
 
@@ -256,13 +256,13 @@
 
                 <dl>
                     <dt>Ligging</dt>
-                    <dd>Aan drukke weg en in woonwijk</dd>
+                    <dd class="detail-standard">Aan drukke weg en in woonwijk</dd>
 
                     <dt>Tuin</dt>
-                    <dd>Tuin rondom</dd>
+                    <dd class="detail-standard">Tuin rondom</dd>
 
                     <dt>Balkon/dakterras</dt>
-                    <dd>Balkon aanwezig</dd>
+                    <dd class="detail-standard">Balkon aanwezig</dd>
                 </dl>
             </section>
 
@@ -274,13 +274,13 @@
 
                 <dl>
                     <dt>Soort garage</dt>
-                    <dd>Vrijstaande stenen garage</dd>
+                    <dd class="detail-standard">Vrijstaande stenen garage</dd>
 
                     <dt>Capaciteit</dt>
-                    <dd>2 auto’s</dd>
+                    <dd class="detail-standard">2 auto’s</dd>
 
                     <dt>Voorzieningen</dt>
-                    <dd>Elektra</dd>
+                    <dd class="detail-standard">Elektra</dd>
                 </dl>
             </section>
 
@@ -292,12 +292,12 @@
 
                 <dl>
                     <dt>Soort parkeergelegenheid</dt>
-                    <dd>Betaald parkeren parkeervergunningen</dd>
+                    <dd class="detail-standard">Betaald parkeren parkeervergunningen</dd>
                 </dl>
             </section>
         </article>
 
-        <article>
+        <article class="betalen-ing">
             <h2 class="ing">Kan je dit huis betalen?</h2>
             <p>Bereken nu direct hoeveel je kunt lenen. <a href="">Bereken nu</a></p>
         </article>
