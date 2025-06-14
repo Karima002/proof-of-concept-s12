@@ -299,37 +299,39 @@
 
         <article class="betalen-ing">
             <h2 class="ing">Kan je dit huis betalen?</h2>
-            <p>Bereken nu direct hoeveel je kunt lenen. <a href="">Bereken nu</a></p>
+            <p class="p-ing">Bereken nu direct hoeveel je kunt lenen. <a href="">Bereken nu</a></p>
+            <img class="logo-ing"src="/assets/ING.png" alt="logo van de ING bank">
         </article>
 
-        <article>
-            <h2>Direct weten als er iets verandert?</h2>
-            <p>Bewaar dit huis als favoriet, en ontvang een e-mail als de prijs of status verandert.</p>
+        <article class="verandering">
+            <img class="huis" src="/assets/illustration.png" alt="foto van huis met hart uit schoorsteen">
+            <h2 class="h2-verandering">Direct weten als er iets verandert?</h2>
+            <p class="p-verandering">Bewaar dit huis als favoriet, en ontvang een e-mail als de prijs of status verandert.</p>
             
-            <button>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="button-verandering">
+                <svg width="24" height="24" viewBox="0 -4 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.5001 4.9287C18.5606 4.0199 17.3072 3.5078 16.0001 3.4987C14.9176 3.49505 13.8638 3.84632 13.0001 4.4987C12.6215 4.78348 12.2848 5.12011 12.0001 5.4987C11.7153 5.12011 11.3787 4.78348 11.0001 4.4987C10.1376 3.84258 9.08376 3.4873 8.00006 3.4873C6.91637 3.4873 5.86256 3.84258 5.00006 4.4987C4.37618 4.9617 3.87004 5.56506 3.52259 6.25996C3.17514 6.95486 2.99613 7.72179 3.00006 8.4987C3.00006 15.9987 11.0001 20.4987 12.0001 20.4987C13.0001 20.4987 21.0001 15.9987 21.0001 8.4987C21 7.83379 20.8673 7.17559 20.6097 6.56259C20.3521 5.9496 19.9749 5.39413 19.5001 4.9287ZM12.0001 18.9287C9.31722 17.6013 7.09973 15.4919 5.64006 12.8787C4.90844 11.5336 4.51706 10.0298 4.50006 8.4987C4.50039 7.69533 4.77707 6.91652 5.28367 6.29302C5.79027 5.66951 6.49595 5.23927 7.28225 5.0745C8.06854 4.90974 8.88758 5.02049 9.60188 5.38816C10.3162 5.75583 10.8822 6.35804 11.2051 7.0937C11.2351 7.1637 11.2601 7.2387 11.2901 7.3137C11.3403 7.46077 11.4353 7.58845 11.5617 7.67886C11.6881 7.76926 11.8396 7.81787 11.9951 7.81787C12.1505 7.81787 12.302 7.76926 12.4284 7.67886C12.5548 7.58845 12.6498 7.46077 12.7001 7.3137C12.7251 7.2387 12.7551 7.1637 12.7851 7.0937C13.1042 6.35191 13.67 5.7433 14.3866 5.37103C15.1032 4.99876 15.9265 4.88574 16.7169 5.05112C17.5073 5.2165 18.2162 5.65011 18.7235 6.27845C19.2307 6.90678 19.5051 7.69119 19.5001 8.4987C19.4872 10.0383 19.0956 11.5511 18.3601 12.9037C16.9004 15.5169 14.6829 17.6263 12.0001 18.9537V18.9287Z" fill="#0071B3"/>
-                </svg>Bewaren
+                </svg> Bewaren
             </button>
         </article>
 
-        <article>
-            <h2>Activiteit</h2>
+        <article >
+            <h2 class="h2-activiteit">Activiteit</h2>
 
-            <section>
-                <div>
+            <section class="activiteit">
+                <div class="activiteit-info">
                     <img src="/assets/oog.png" alt="illustratie van oog">
                     <p>75x</p>
                     <p>bekenen</p>
                 </div>
 
-                <div>
+                <div class="activiteit-info">
                     <img src="/assets/hart.png" alt="illustratie van hart">
                     <p>12x</p>
                     <p>bewaard</p>
                 </div>
 
-                <div>
+                <div class="activiteit-info">
                     <img src="/assets/agenda.png" alt="illustratie van hart">
                     <p>31-12-2024</p>
                     <p>Op funda</p>
@@ -337,35 +339,30 @@
             </section>
         </article>
 
-        <article>
-            <h2>Buurt</h2>
+        <article class="description-list">
+            <h2 class="h2-buurt">Buurt</h2>
             
-            <div>
+            <div class="buurt-groep">
                 <img src="/assets/thumpnail.png">
                 <a href="">Nieuwe pijp</a>
                 <p>Amsterdam</p>
-
-                {% render 'partials/icons/pijl.liquid' %}
+                <img class="pijl" src="/assets/pijl.png" alt="icon van een pijl die naar rechts wijst">
             </div>
 
-            <table>
-                <tr>
-                    <th>Inwoners</th>
-                    <td>12.450</td>
-                </tr>
-                <tr>
-                    <th>Gezinnen met kinderen</th>
-                    <td>55%</td>
-                </tr>
-                <tr>
-                    <th>Gem. vraagprijs / m²</th>
-                    <td>€ 3.078</td>
-                </tr>
-            </table>
+            <dl>
+                <dt>Inwoners</th>
+                <dd class="detail-standard">12.450</td>
+
+                <dt>Gezinnen met kinderen</th>
+                <dd class="detail-standard">55%</td>
+
+                <dt>Gem. vraagprijs / m²</th>
+                <dd class="detail-standard">€ 3.078</td>
+            </dl>
         </article>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.2226894504543!2d4.879990576692972!3d52.34824624893146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609f65ebcbf19%3A0x156af697d4fe380d!2sApollolaan%2011%2C%201077%20AA%20Amsterdam!5e0!3m2!1snl!2snl!4v1749243620818!5m2!1snl!2snl" width="360" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
-        <div>
+        <div class="tools-maps">
             <a href="">
                 <img src="/assets/trailing.png" alt="afbeelding van 2 pijlen"> 
                 Open grotere kaart
@@ -377,14 +374,14 @@
             </a>
         </div>
 
-        <article>
+        <article class="bm-makelaars">
             <img src="/assets/bm.png" alt="afbeelding van logo BM">
 
             <a href="">
                 <h2>B&M Makelaars</h2>
             </a>
 
-            <a href="">
+            <a class="link-tel" href="">
                 <img src="/assets/tel.png">
                 <p>Toon telefoonnummer</p>
             </a>
@@ -400,11 +397,12 @@
                 <p>Vraag bezichtiging aan</p>
             </a>
 
-            <a href="">Meld een fout over deze woning</a>
         </article>
+        <a class="fout-melden" href="">Meld een fout over deze woning</a>
+
 
 <!-- MARK: Carousel-->
-        <article>
+        <article class="vergelijkbaar">
             <h2>Vergelijkbaar in de buurt</h2>
 
             <button>Te koop</button>
