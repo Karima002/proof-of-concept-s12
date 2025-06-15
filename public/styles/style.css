@@ -78,6 +78,9 @@ a, .button-menu{
         max-width: 984px;
     }
 }
+
+@supports (scroll-snap-type: x mandatory) {
+
 .carousel {
     display: flex;
     overflow-x: auto;
@@ -89,7 +92,18 @@ a, .button-menu{
     scroll-snap-align: center;
     scroll-snap-stop: always;
   }
+}
 
+@supports not (scroll-snap-type: x mandatory) {
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .carousel__slide {
+    margin-right: 1em; /* Als fallback ruimte tussen slides */
+  }
+}
 
 .adres {
     display: grid;
