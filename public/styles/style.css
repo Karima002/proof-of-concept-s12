@@ -80,29 +80,28 @@ a, .button-menu{
 }
 
 @supports (scroll-snap-type: x mandatory) {
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;  
+    }
 
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;  
-}
-
-.carousel__slide {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
+    .carousel__slide {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
 }
 
 @supports not (scroll-snap-type: x mandatory) {
-  .carousel {
-    display: flex;
-    overflow-x: scroll;
-  }
+    .carousel {
+        display: flex;
+        overflow-x: scroll;
+    }
 
-  .carousel__slide {
-    margin-right: 1em; /* Als fallback ruimte tussen slides */
-  }
+    .carousel__slide {
+        margin-right: 1em; 
+    }
 }
 
 .adres {
@@ -210,6 +209,15 @@ a, .button-menu{
 
 .content {
     display: none;
+}
+
+@supports not (selector(:checked)) {
+    .content {
+        display: block;
+    }
+    #check, label {
+        display: none;
+    }
 }
 
 .omschrijving label {
