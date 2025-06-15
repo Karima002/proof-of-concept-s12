@@ -105,6 +105,7 @@ body {
     --font-size-xl: 2.375rem; /* 38px ÷ 16 = 2.375rem */
     --font-size-l: 2rem; /* 32px ÷ 16 = 2rem */
     --font-size-xm: 1.5rem; /* 24px */
+    --font-size-xxm: 1.25em; /*20px*/
     --font-size-m: 1rem; /*16px, voor de header*/
     --font-size-s: .9rem; 
     --font-size-xs: 0.875rem; /* 14px ÷ 16 = 0.875rem */
@@ -131,7 +132,7 @@ body {
 
 h1 {
   font-family: var(--font-proxima-semibold);
-  font-size: var(--font-size-xm);
+  font-size: var(--font-size-xxm);
   }
 
 p, dt, span, dd{
