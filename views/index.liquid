@@ -402,71 +402,114 @@
 
 
 <!-- MARK: Carousel-->
+
+
         <article class="vergelijkbaar">
             <h2>Vergelijkbaar in de buurt</h2>
 
             <button>Te koop</button>
             <button>Verkocht</button>
+        </article>
 
-            <section>
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=200">
+        <article class="carousel">
+            <section class="aanbevelingen">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
 
                 <h2>Jan Peppinkstraat 2</h2>
-                <p>1069 PH Amsterdam</p>
-                <p>€ 575.000 k.k.</p>
+                <p class="price">1069 PH Amsterdam</p>
+                <p class="price">€ 575.000 k.k.</p>
 
-                {% render 'partials/icons/oppervlakte.liquid' %}
-                <p> {{ huis.m2_garden }} m²</p>
+                <div class="info-oppervlakte">
+                    {% render 'partials/icons/oppervlakte.liquid' %}
+                    <p> {{ huis.m2_garden }} m²</p>
 
-                {% render 'partials/icons/oppervlakte2.liquid' %}
-                <p> {{ huis.m2 }} m²</p>
+                    {% render 'partials/icons/oppervlakte2.liquid' %}
+                    <p> {{ huis.m2 }} m²</p>
 
-                {% render 'partials/icons/room.liquid' %}
-                <p> {{huis.rooms}}</p>
+                    {% render 'partials/icons/room.liquid' %}
+                    <p> {{huis.rooms}}</p>
+                    
+                    {% render 'partials/icons/electric.liquid' %}
+                    <p>C</p>
+                </div>
                 
-                {% render 'partials/icons/electric.liquid' %}
-                <p>C</p>
+                <p class="price">Frisia Makelaars</p>
+
             </section>
 
-            <section>
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=200">
+             <section class="aanbevelingen">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
 
                 <h2>Jan Peppinkstraat 2</h2>
-                <p>1069 PH Amsterdam</p>
-                <p>€ 575.000 k.k.</p>
+                <p class="price">1069 PH Amsterdam</p>
+                <p class="price">€ 575.000 k.k.</p>
 
-                {% render 'partials/icons/oppervlakte.liquid' %}              
-                <p> {{ huis.m2_garden }} m²</p>
+                <div class="info-oppervlakte">
+                    {% render 'partials/icons/oppervlakte.liquid' %}
+                    <p> {{ huis.m2_garden }} m²</p>
 
-                {% render 'partials/icons/oppervlakte2.liquid' %}
-                <p> {{ huis.m2 }} m²</p>
+                    {% render 'partials/icons/oppervlakte2.liquid' %}
+                    <p> {{ huis.m2 }} m²</p>
 
-
-                {% render 'partials/icons/room.liquid' %}
-                <p> {{huis.rooms}}</p>
+                    {% render 'partials/icons/room.liquid' %}
+                    <p> {{huis.rooms}}</p>
+                    
+                    {% render 'partials/icons/electric.liquid' %}
+                    <p>C</p>
+                </div>
                 
-                {% render 'partials/icons/electric.liquid' %}
-                <p>C</p>
+                <p class="price">Frisia Makelaars</p>
+
             </section>
 
-            <section>
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=200">
+             <section class="aanbevelingen">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
 
                 <h2>Jan Peppinkstraat 2</h2>
-                <p>1069 PH Amsterdam</p>
-                <p>€ 575.000 k.k.</p>
+                <p class="price">1069 PH Amsterdam</p>
+                <p class="price">€ 575.000 k.k.</p>
 
-                {% render 'partials/icons/oppervlakte.liquid' %}               
-                <p> {{ huis.m2_garden }} m²</p>
+                <div class="info-oppervlakte">
+                    {% render 'partials/icons/oppervlakte.liquid' %}
+                    <p> {{ huis.m2_garden }} m²</p>
 
-                {% render 'partials/icons/oppervlakte2.liquid' %}
-                <p> {{ huis.m2 }} m²</p>
+                    {% render 'partials/icons/oppervlakte2.liquid' %}
+                    <p> {{ huis.m2 }} m²</p>
 
-                {% render 'partials/icons/room.liquid' %}
-                <p> {{huis.rooms}}</p>
+                    {% render 'partials/icons/room.liquid' %}
+                    <p> {{huis.rooms}}</p>
+                    
+                    {% render 'partials/icons/electric.liquid' %}
+                    <p>C</p>
+                </div>
                 
-                {% render 'partials/icons/electric.liquid' %}
-                <p>C</p>
+                <p class="price">Frisia Makelaars</p>
+
+            </section>
+
+             <section class="aanbevelingen">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
+
+                <h2>Jan Peppinkstraat 2</h2>
+                <p class="price">1069 PH Amsterdam</p>
+                <p class="price">€ 575.000 k.k.</p>
+
+                <div class="info-oppervlakte">
+                    {% render 'partials/icons/oppervlakte.liquid' %}
+                    <p> {{ huis.m2_garden }} m²</p>
+
+                    {% render 'partials/icons/oppervlakte2.liquid' %}
+                    <p> {{ huis.m2 }} m²</p>
+
+                    {% render 'partials/icons/room.liquid' %}
+                    <p> {{huis.rooms}}</p>
+                    
+                    {% render 'partials/icons/electric.liquid' %}
+                    <p>C</p>
+                </div>
+                
+                <p class="price">Frisia Makelaars</p>
+
             </section>
         </article>
 
