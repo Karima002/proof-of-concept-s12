@@ -623,6 +623,16 @@ iframe {
     border: none;
 }
 
+@supports not (selector(:checked)) {
+    .antwoord {
+        display: block; /* Antwoord standaard zichtbaar */
+    }
+
+    .toggle, label {
+        display: none;
+    }
+}
+
 
 .toggle + .vraag label img { /*draaien van pijltje als antwoord geopend is*/
   transform: rotate(0deg);
