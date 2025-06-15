@@ -213,6 +213,15 @@ a, .button-menu{
 }
 
 
+@supports not (selector(:checked)) {
+    .content {
+        display: block;
+    }
+    #check, label {
+        display: none;
+    }
+}
+
 
 
 .omschrijving label {
