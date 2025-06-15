@@ -210,8 +210,20 @@ a, .button-menu{
 
 .content {
     display: none;
-}
+    animation: fadeIn .5s}
 
+
+@keyframes fadeIn {
+	0% {
+        opacity: 0;
+    }
+	90% {
+        opacity: .5
+    }    
+	100% {
+        opacity:1;
+        }
+}
 
 @supports not (selector(:checked)) {
     .content {
