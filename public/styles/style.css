@@ -71,6 +71,13 @@ a, .button-menu{
 
 /* MARK: main mediaviewer & info */
 
+.desktop {
+    @media (min-width: 1440px) {
+        position: relative;
+        left: 15%;
+        max-width: 984px;
+    }
+}
 .carousel {
     display: flex;
     overflow-x: auto;
@@ -190,6 +197,7 @@ a, .button-menu{
 .content {
     display: none;
 }
+
 .omschrijving label {
     display: flex;
     align-items: center;
@@ -410,8 +418,8 @@ dt {
   margin: .1em;
 }
 
-.h2-activiteit {
-    padding: 1em 0 1em .5em;
+.h1-activiteit {
+    padding: 1em 0 1em .7em;
 }
 
 .buurt-groep {
@@ -440,12 +448,15 @@ dt {
     }
 }
 
-.h2-buurt {
-    padding-bottom: 1em;
+.h1-buurt {
+    padding: 1em 0 .7em .6em;
 }
 
 iframe {
     padding-left: .7em;
+    @media (min-width: 1440px) {
+        width: 60.9375em;
+    }
 }
 
 .tools-maps {
@@ -552,5 +563,58 @@ iframe {
     }
     h2, img, .price {
         padding: .5em 0 .3em .5em
+    }
+}
+
+.FAQ {
+    padding: .8em;
+}
+
+.toggle {
+    display: none;
+}
+
+.antwoord {
+    display: none;
+    padding-top: .5em;
+}
+
+.toggle:checked ~ .antwoord { 
+    display: block;
+}
+
+.toggle:checked ~ label {
+    display: none;
+}
+
+.vraag {
+    display: flex;
+    border-bottom: var(--border);
+    padding: .5em 0 .5em 0;
+}
+
+.toggle:checked ~ .vraag {
+    border: none;
+}
+
+
+.toggle + .vraag label img { /*draaien van pijltje als antwoord geopend is*/
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.toggle:checked + .vraag label img {
+  transform: rotate(180deg);
+}
+
+.verdiepen {
+    display: flex;
+    flex-direction: column;
+    button {
+        border: var(--border);
+        padding: .7em;
+        margin: .8em;
+        font-family: var(--font-proxima-regular);
+        color: var(--color-blue);
     }
 }
