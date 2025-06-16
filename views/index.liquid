@@ -6,34 +6,39 @@
     <main>
         <div class="carousel">
             <div class="carousel__slide" data-label="Slide 1">
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=320&width=375">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=320&width=375" alt="image van Stationsweg 11">
             </div>
 
             <div class="carousel__slide" data-label="Slide 2">
-                <img src="/assets/plattegrong.jpg" width="375" height=320>
+                <img src="/assets/plattegrong.jpg" width="375" height=320 alt="afbeelding van plattegrond">
             </div>
 
             <div class="carousel__slide" data-label="Slide 3">
-                <video controls width="375" height=320>
+                <video controls width="375" height=320 title="video van een huis aan de Apollolaan"> 
                     <source src="/assets/video.mp4" type="video/mp4">
                 </video>
             </div>
 
             <div class="carousel__slide" data-label="Slide 4">
-                <img src="/assets/afb1.jpg" width="375" height=320>
+                <img src="/assets/afb1.jpg" width="375" height=320 alt="foto binnenkant huis met tuin">
             </div>
 
             <div class="carousel__slide" data-label="Slide 5">
-                <img src="/assets/afb2.jpg" width="375" height=320>
+                <img src="/assets/afb2.jpg" width="375" height=320 alt="huis van teras met barbeque">
             </div>
         </div>  
 
+        <form method="POST" action="/detail/koop/Amsterdam/huis-Apollolaan-11">
+            <input type="hidden" name="name" value="{{ huis.name }}">
+            <button type="submit">❤️ Like</button>
+        </form>
+        
         <div class="desktop">
             <section class="adres">
 
                 <h1 class="straat"> {{ huis.street }} 11</h1>
                 <p class="tekst-postcode"> {{ huis.postal_code }} {{ huis.city }}</p>
-                <img class="image-kaart-adres" src="/assets/map.png">
+                <img class="image-kaart-adres" src="/assets/map.png" alt="image van plaats in Amsterdam">
             </section>
 
             <!-- MARK: Informatie huis-->
@@ -73,13 +78,13 @@
             <div class="content">
                 <p class="tekst-icons"> {{ huis.description }}</p>
                 <label for="check"> 
-                    <img src="/assets/line.png">
+                    <img src="/assets/line.png" alt="icoon van een streep">
                     <p>Verberg omschrijving</p>
                 </label>
             </div>
 
             <label for="check">
-                <img src="/assets/plus.png">
+                <img src="/assets/plus.png" alt="icoon van een plus">
                 <p> Lees de volledige omschrijving </p>
             </label>
         </article>
@@ -87,11 +92,11 @@
         <button class="advertentie-button">Advertentie</button>
 
         <article class="advertentie">
-            <img class="logo-thuis-in-staal" src="/assets/Advertiser.png">
+            <img class="logo-thuis-in-staal" src="/assets/Advertiser.png" alt="logo van thuis in staal">
             <h1 class="design-stalen-deur-h1">Design stalen deuren</h1>
             <p class="design-stalen-deur-p">Al meer dan 1200 tevreden klanten door heel Nederland. Meer dan 10 jaar ervaring.</p>
             <button class="offerte">Offerte vragen</button>
-            <img class="image-staal" src="/assets/imagethuis.png">
+            <img class="image-staal" src="/assets/imagethuis.png" alt="image van voorbeeld huis van thuis in staal">
         </article>
 
         <!--MARK: description lists --> 
@@ -213,7 +218,7 @@
                     </div>
 
                     <div class="naam-kenmerk-tabel">
-                        <img src="/assets/energy-label.png">
+                        <img src="/assets/energy-label.png" alt="icoon van i voor meer informatie over energielabel">
                         <dd>Energielabel A</dd>
                     </div>
 
@@ -345,7 +350,7 @@
         <article class="description-list">
             
             <div class="buurt-groep">
-                <img src="/assets/thumpnail.png">
+                <img src="/assets/thumpnail.png" alt="afbeelding van de Pijp in Amsterdam">
                 <a href="">Nieuwe pijp</a>
                 <p>Amsterdam</p>
                 <img class="pijl" src="/assets/pijl.png" alt="icon van een pijl die naar rechts wijst">
@@ -384,7 +389,7 @@
             </a>
 
             <a class="link-tel" href="">
-                <img src="/assets/tel.png">
+                <img src="/assets/tel.png" alt="icoon van telefoon">
                 <p>Toon telefoonnummer</p>
             </a>
 
@@ -395,7 +400,7 @@
             </button>
 
             <a href="">
-                <img src="/assets/agenda2.png">
+                <img src="/assets/agenda2.png" alt="icoon van agenda">
                 <p>Vraag bezichtiging aan</p>
             </a>
 
@@ -415,7 +420,7 @@
 
         <article class="carousel">
             <section class="aanbevelingen">
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205" alt="afbeelding van een huis aan de buitenkant">
 
                 <h2>Jan Peppinkstraat 2</h2>
                 <p class="price">1069 PH Amsterdam</p>
@@ -440,7 +445,7 @@
             </section>
 
              <section class="aanbevelingen">
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205" alt="afbeelding van een huis aan de buitenkant">
 
                 <h2>Jan Peppinkstraat 2</h2>
                 <p class="price">1069 PH Amsterdam</p>
@@ -465,7 +470,7 @@
             </section>
 
              <section class="aanbevelingen">
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205" alt="afbeelding van een huis aan de buitenkant">
 
                 <h2>Jan Peppinkstraat 2</h2>
                 <p class="price">1069 PH Amsterdam</p>
@@ -490,7 +495,7 @@
             </section>
 
              <section class="aanbevelingen">
-                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205">
+                <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=205" alt="afbeelding van een huis aan de buitenkant">
 
                 <h2>Jan Peppinkstraat 2</h2>
                 <p class="price">1069 PH Amsterdam</p>
