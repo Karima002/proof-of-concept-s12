@@ -5,9 +5,12 @@
 
     <main>
         <div class="carousel">
-            
-            <form method="POST" action="/detail/koop/Amsterdam/huis-Apollolaan-11">
-                <input type="hidden" name="name" value="{{ huis.name }}">
+
+            {% if likes %}
+
+                <form method="POST" action="/detail/koop/Amsterdam/huis-Apollolaan-11">
+
+            <input type="hidden" name="name" value="{{ huis.name }}">
                 <button class="like-button" type="submit">
                     {% if likes %}
                         <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +23,11 @@
                         </svg>
                     {% endif %}
                 </button>
-            </form>
+
+            {% else %}
+                <form method="DELETE" action="/detail/koop/Amsterdam/huis-Apollolaan-11"></form>
+
+            {% endif %}
 
             <div class="carousel__slide" data-label="Slide 1">
                 <img src="https://fdnd-agency.directus.app/assets/{{ huis.poster_image }}?height=320&width=375" alt="image van Stationsweg 11">

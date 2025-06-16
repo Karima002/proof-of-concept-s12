@@ -38,6 +38,15 @@ app.post('/detail/koop/Amsterdam/huis-Apollolaan-11', async function (request, r
 
 });
 
+app.post('/detail/koop/Amsterdam/huis-Apollolaan-11/delete', async function (request, response) {
+  await fetch(`https://fdnd.directus.app/items/messages?filter[for][_eq]=Karima_${request.body.name}&filter[from][_eq]=1`, {
+    method: "DELETE"
+  });
+
+  response.redirect(303, '/detail/koop/Amsterdam/huis-Apollolaan-11');
+});
+
+
 app.set('port', process.env.PORT || 8000)
 
 // Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
