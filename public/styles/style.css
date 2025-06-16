@@ -11,7 +11,6 @@ header {
 }
 
 .logo-funda {
-
     @media (min-width: 768px) {
         display: flex;
         justify-content: flex-start;
@@ -82,6 +81,7 @@ a,
 
 @supports (scroll-snap-type: x mandatory) {
     .carousel {
+        position: relative;
         display: flex;
         overflow-x: auto;
         overscroll-behavior-x: contain;
@@ -103,6 +103,15 @@ a,
     .carousel__slide {
         margin-right: 1em; 
     }
+}
+
+.like-button {
+    position: fixed;
+    right: 3%;
+    background-color: var(--color-white);
+    padding: .5em;
+    top: 8%;
+    border-radius: .2em;
 }
 
 .adres {
@@ -135,6 +144,9 @@ a,
     grid-column: 2/3;
     grid-row: 1/3;
     padding-top: 1em;
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 
@@ -155,8 +167,7 @@ a,
     padding-left: .4em;
 }
 
-.maandlasten,
-a {
+.maandlasten a {
     display: flex;
     align-items: center;
     padding-left: -.5em;
@@ -185,8 +196,7 @@ a {
     padding-top: .8em;
 }
 
-.omschrijving,
-p {
+.omschrijving p {
     padding-left: .8em;
     font-family: var(--font-proxima-regular);
     font-size: var(--font-size-m);
@@ -239,8 +249,7 @@ p {
 }
 
 
-.omschrijving,
-label {
+.omschrijving label {
     display: flex;
     align-items: center;
     padding-left: .5em;
@@ -297,7 +306,6 @@ label {
 .design-stalen-deur-p {
     grid-column: 1/2;
     grid-row: 3/4;
-
 }
 
 .offerte {
@@ -311,12 +319,14 @@ label {
     padding-left: .7em;
     margin-top: .5em;
     border-radius: .2em;
+
     &:hover {
         background-color: var(--color-blue);
         color: var(--color-white);
         cursor: pointer;
- ;
     }
+    
+
 }
 
 .image-staal {
@@ -603,9 +613,7 @@ iframe {
     @media (min-width: 768px) {
         max-width: 60rem;
     }
-    h2,
-    img,
-    .price {
+    h2, img, .price {
         padding: .5em 0 .3em .5em
     }
 }
