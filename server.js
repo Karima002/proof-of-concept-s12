@@ -19,8 +19,24 @@ app.get('/detail/koop/Amsterdam/huis-Apollolaan-11', async function (request, re
     
     response.render("index.liquid", { 
       huis: apiResponseJSON.data[6], // haal het zesde huis eruit
+      likes: apiResponseJSON.data[6]
     })
   })
+
+app.post('/detail/koop/Amsterdam/huis-Apollolaan-11', async function (request, response) {
+  await fetch("https://fdnd.directus.app/items/messages", {
+    method: "POST",
+    body: JSON.stringify({
+      for: "Karima_" + request.body.name,
+      from: 1
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  });
+      response.redirect(303, '/detail/koop/Amsterdam/huis-Apollolaan-11')
+
+});
 
 app.set('port', process.env.PORT || 8000)
 
