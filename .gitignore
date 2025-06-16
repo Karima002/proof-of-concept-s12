@@ -7,5 +7,5 @@ node_modules
 .npm
 .env
 views/index.liquid
-styles/style.css
+public/styles/style.css
 
