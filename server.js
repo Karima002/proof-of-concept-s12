@@ -13,48 +13,53 @@ app.engine('liquid', engine.express())
 
 app.set('views', './views') //Instellen van de map met de Liquid templates
 
-app.get('/detail/koop/Amsterdam/huis-Apollolaan-11', async function (request, response) {
+app.get('/detail/koop/Amsterdam/huis-Apollolaan-11/28', async function (request, response) {
+   const id = request.params.id;
     const apiResponse = await fetch('https://fdnd-agency.directus.app/items/f_houses')
     const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
     
     response.render("index.liquid", { 
       huis: apiResponseJSON.data[6], // haal het zesde huis eruit
-      likes: apiResponseJSON.data[6]
+      likes: apiResponseJSON.data
     })
   })
 
-app.post('/detail/koop/Amsterdam/huis-Apollolaan-11/like', async function (request, response) {
-  try {
-    // Voeg een like toe
-    await fetch("https://fdnd.directus.app/items/messages", {
-      method: "POST",
-      body: JSON.stringify({
-        for: "Karima_" + request.body.name,
-        from: 1
-      }),
-      headers: {
-        'Content-Type': 'application/json;charset=UTF-8'
-      }
-    });
-    
-    response.redirect(303, '/detail/koop/Amsterdam/huis-Apollolaan-11');
-  } catch (error) {
-    console.error('Error adding like:', error);
-    response.status(500).send('Error adding like');
-  }
-});
+app.post('/detail/koop/Amsterdam/huis-Apollolaan-11/28', async function (request, response) {
+  const id = request.params.id;
 
-app.post('/detail/koop/Amsterdam/huis-Apollolaan-11/delete', async function (request, response) {
-  await fetch(`https://fdnd.directus.app/items/messages?filter[for][_eq]=Karima_${request.body.name}&filter[from][_eq]=1`, {
-    method: "DELETE"
+  await fetch("https://fdnd.directus.app/items/messages", {
+    method: "POST",
+    body: JSON.stringify({
+      for: "Karima_s13" + name,
+      from: 1,
+      house_id: id 
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
   });
 
-  response.redirect(303, '/detail/koop/Amsterdam/huis-Apollolaan-11');
+  response.redirect(303, `/detail/koop/Amsterdam/huis-Apollolaan-11/28`);
 });
 
+
+// POST route voor verwijderen like 
+app.post('/detail/koop/Amsterdam/huis-Apollolaan-11/28/delete/28', async function (request, response) {
+    const id = request.params.id;
+    
+    await fetch(`https://fdnd.directus.app/items/messages/`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8'
+        }
+    });
+
+    response.redirect(303, `/detail/koop/Amsterdam/huis-Apollolaan-11/28`);
+});
 
 app.set('port', process.env.PORT || 8000)
 
 // Start Express op, gebruik daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
-  console.log(`http://localhost:${app.get('port')}/detail/koop/Amsterdam/huis-Apollolaan-11`)})
+  console.log(`http://localhost:${app.get('port')}/detail/koop/Amsterdam/huis-Apollolaan-11/28`)})
+
