@@ -1,5 +1,5 @@
 # Funda: detail listing page
-De opdracht voor Funda bestond uit een interactieve detailpagina van een huis aan de Apollolaan. Het doel was om een pagina te maken waar gebruikers eenvoudig alle belangrijke informatie over een woning kunnen bekijken gebasseerd op een bestaande nieuwe design
+De opdracht voor Funda bestond uit een interactieve detailpagina van een huis aan de Apollolaan. Het doel was om een pagina te maken waar gebruikers eenvoudig alle belangrijke informatie over een woning kunnen bekijken gebasseerd op een nieuwe design
 
 ## Impressies van de website
 **Desktop**
