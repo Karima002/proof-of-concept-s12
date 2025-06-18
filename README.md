@@ -11,7 +11,7 @@ De opdracht voor Funda bestond uit een interactieve detailpagina van een huis aa
 ## Kenmerken: interacties
 
 ### Mediaviewer met een carousel
-Met de mediaviewer kan de bezoeker meerdere foto's en video's bekijken in een carousel. De carousel is progressive enhanced en werkt met HTML en CSS. CSS properties die ik heb gebruikt zijn `overscroll-behavior-x`, `scroll-snap-type: x mandatory;`, `scroll-snap-align: center;`. Voor meer informatie kan je (deze)[https://developer.chrome.com/blog/carousels-with-css?hl=nl] bron raadplegen.
+Met de mediaviewer kan de bezoeker meerdere foto's en video's bekijken in een carousel. De carousel is progressive enhanced en werkt met HTML en CSS. CSS properties die ik heb gebruikt zijn `overscroll-behavior-x`, `scroll-snap-type: x mandatory;`, `scroll-snap-align: center;`. Voor meer informatie kan je [deze](https://developer.chrome.com/blog/carousels-with-css?hl=nl) bron raadplegen.
 
 Voor de carousel heb ik een fallback toegevoegd voor oudere browsers. Browsers die geen `scroll-snap-type: x mandatory` ondersteunen wordt `overflow-x: scroll` gebruikt. Hiermee wordt een horizontale scrollbar toegevoegd, zodat gebruikers door de items kunnen scrollen wanneer scroll-snap-type niet beschikbaar is. Of een browser `scroll-snap-type: x mandatory` ondersteunt is te zien via deze bron: [Can I use bron](https://caniuse.com/?search=scroll-snap-type). 
 
@@ -80,8 +80,6 @@ De bewaar/like-knop biedt gebruikers de mogelijkheid om een woning toe te voegen
 
 5. Open de applicatie:
 - Open een webbrowser en ga naar http://localhost:3000 om de website te bekijken.
-
-## Bronnen
 
 ## Licentie
 
