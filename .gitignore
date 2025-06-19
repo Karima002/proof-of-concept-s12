@@ -1,4 +1,3 @@
-views/index.liquid
 .DS_Store
 logs
 *.logs
@@ -6,6 +5,5 @@ npm-debug.log*
 node_modules
 .npm
 .env
-views/index.liquid
-public/styles/style.css
+
 
