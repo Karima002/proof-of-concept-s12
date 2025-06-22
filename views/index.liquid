@@ -70,14 +70,14 @@
 
 
                 {% render 'partials/icons/room.liquid' %}
-                <p class="tekst-icons"> {{huis.rooms}}</p>
+                <p class="tekst-icons"> {{ huis.rooms }}</p>
                 
                {% render 'partials/icons/electric.liquid' %}
                 <p class="tekst-icons">C</p>
             </section>
 
             <section class="maandlasten">
-                <p class="tekst-price">€ 3.250.000 k.k.  </p>
+                <p class="tekst-price"> {{ huis.price }} k.k.  </p>
 
                 <a href="https://www.funda.nl/hypotheek/maandlasten/ing/?id=43923245">
                 {% render 'partials/icons/calculator.liquid' %}
